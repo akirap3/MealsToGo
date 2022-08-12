@@ -1,8 +1,8 @@
-import React from 'react';
-import { StyleSheet, View, SafeAreaView, StatusBar } from 'react-native';
-import { Searchbar } from 'react-native-paper';
-import { RestaurantInfoCard } from '../components/restaurant-info-card.components';
-import styled from 'styled-components/native';
+import React from "react";
+import { SafeAreaView, StatusBar } from "react-native";
+import { Searchbar } from "react-native-paper";
+import { RestaurantInfoCard } from "../components/restaurant-info-card.components";
+import styled from "styled-components/native";
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
@@ -10,14 +10,14 @@ const SafeArea = styled(SafeAreaView)`
 `;
 
 const SearchContainer = styled.View`
-  padding: 16px;
-  background-color: green;
+  padding: ${(props) => props.theme.space[3]}
+  background-color: ${(props) => props.theme.colors.bg.primary}
 `;
 
 const RestaurantListContainer = styled.View`
   flex: 1;
-  padding: 16px;
-  background-color: cyan;
+  padding: ${(props) => props.theme.space[3]}
+  background-color: ${(props) => props.theme.colors.bg.secondary};
 `;
 
 export const RestaurantSreen = () => {
